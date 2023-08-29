@@ -3,7 +3,7 @@
 const sendMessage=async (e)=>{
   try{
     e.preventDefault();
-    const response= await fetch('./index.php/frontend/store',{
+    const response= await fetch('/frontend/store',{
       method:'POST',
       body:new FormData(e.target)
     })
