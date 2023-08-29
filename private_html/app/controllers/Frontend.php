@@ -10,6 +10,6 @@ class Frontend extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('home');
+        $this->load->view('home',["TitleForm"=>'Lorem ipsum dolor']);
     }
 }
