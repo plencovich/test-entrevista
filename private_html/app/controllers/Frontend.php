@@ -18,7 +18,7 @@ class Frontend extends CI_Controller
     {
         
         $this->load->library('form_validation');
-        $this->load->model('ContactModel');
+        $this->load->model('ContactMessageModel');
         $this->load->database();
         $this->form_validation->set_data($this->input->post());
         $this->form_validation->set_rules('c_fullname', 'fullname', 'required');
@@ -32,7 +32,7 @@ class Frontend extends CI_Controller
                 'message'=>'incorrect data check and resubmit.',
                 'error'=>$this->form_validation->error_array()
             ]); 
-            return;
+            return; 
         } 
             $data = [
                 'fullname' => $this->input->post('c_fullname'),
