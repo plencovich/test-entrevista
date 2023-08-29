@@ -1,0 +1,26 @@
+{
+  "name": "test-entrevista",
+  "version": "1.0.0",
+  "description": "Test entrevista técnica",
+  "scripts": {
+    "dev": "npm run clean-assets && npm run development",
+    "prod": "npm run clean-assets && npm run production",
+    "watch": "npm run development -- --watch",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "clean-assets": "rm -fR public_html/assets/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/plencovich/test-entrevista.git"
+  },
+  "author": "Diego Plenco - Plen.co",
+  "license": "MIT",
+  "homepage": "https://github.com/plencovich/test-entrevista#readme",
+  "devDependencies": {
+    "bootstrap": "^5.3.1",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.49",
+    "sweetalert2": "^11.7.27"
+  }
+}

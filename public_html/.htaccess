@@ -1,0 +1,30 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin *
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    Options -Indexes
+
+    RewriteRule ^img/bg/(.+)$ /assets/images/bg/$1 [L]
+
+    RewriteCond %{REQUEST_URI} ^system.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    RewriteCond %{REQUEST_URI} ^app.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?/$1 [L]
+
+    ErrorDocument 404 /404
+    ErrorDocument 403 /404
+    RewriteRule ^vendor/(.*)$ /404
+
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /general/error_404
+</IfModule>

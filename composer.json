@@ -1,0 +1,14 @@
+{
+  "name": "plenco/wmscp",
+  "description": "Web System Managment in the Cloud by Plen.co",
+  "require": {
+    "codeigniter/framework": "^3.1",
+    "vlucas/phpdotenv": "^5.4"
+  },
+  "config": {
+    "vendor-dir": "private_html/vendor",
+    "platform": {
+      "php": "7.4.33"
+    }
+  }
+}

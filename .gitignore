@@ -1,0 +1,55 @@
+### CodeIgniter ###
+*public_html/app/logs/*
+!public_html/app/logs/index.html
+!public_html/app/logs/.htaccess
+*public_html/app/logs/log-*.php
+!*public_html/app/logs/index.html
+!*public_html/app/logs/.htaccess
+*public_html/app/cache/*
+!*public_html/app/cache/index.html
+!*public_html/app/cache/.htaccess
+
+*private_html/app/logs/*
+!private_html/app/logs/index.html
+!private_html/app/logs/.htaccess
+*private_html/app/logs/log-*.php
+!*private_html/app/logs/index.html
+!*private_html/app/logs/.htaccess
+*private_html/app/cache/*
+!*private_html/app/cache/index.html
+!*private_html/app/cache/.htaccess
+
+### ASSETS ###
+*public_html/assets/css/*
+*public_html/assets/js/*
+*public_html/assets/webfonts/*
+*public_html/assets/images/*
+public_html/mix-manifest.json
+public_html/mix.js.map
+public_html/install.pwa.js
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### PHPStorm ###
+.idea/*
+
+### Composer ###
+*composer.phar
+*composer.lock
+private_html/vendor
+
+*node_modules
+
+### Media ###
+*public_html/img
+*public_html/media
+*private_html/media
+
+*private_html/.env
+
+*.DS_Store
